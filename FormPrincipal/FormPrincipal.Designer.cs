@@ -31,12 +31,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.pnContainer = new System.Windows.Forms.Panel();
             this.pnRight = new System.Windows.Forms.Panel();
+            this.btnSlide = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnLeft = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.pnReporte = new System.Windows.Forms.Panel();
+            this.pnPaciente = new System.Windows.Forms.Panel();
+            this.pnServicio = new System.Windows.Forms.Panel();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnPaciente = new System.Windows.Forms.Button();
+            this.btnServicio = new System.Windows.Forms.Button();
             this.pnUp = new System.Windows.Forms.Panel();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnContainer.SuspendLayout();
+            this.pnRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.pnUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -52,26 +67,182 @@
             this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContainer.Location = new System.Drawing.Point(0, 0);
             this.pnContainer.Name = "pnContainer";
-            this.pnContainer.Size = new System.Drawing.Size(1387, 900);
+            this.pnContainer.Size = new System.Drawing.Size(1392, 968);
             this.pnContainer.TabIndex = 0;
             // 
             // pnRight
             // 
-            this.pnRight.BackColor = System.Drawing.Color.Silver;
+            this.pnRight.BackColor = System.Drawing.Color.White;
+            this.pnRight.Controls.Add(this.btnSlide);
+            this.pnRight.Controls.Add(this.pictureBox1);
             this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnRight.Location = new System.Drawing.Point(337, 40);
+            this.pnRight.Location = new System.Drawing.Point(309, 40);
             this.pnRight.Name = "pnRight";
-            this.pnRight.Size = new System.Drawing.Size(1050, 860);
+            this.pnRight.Size = new System.Drawing.Size(1083, 928);
             this.pnRight.TabIndex = 2;
+            // 
+            // btnSlide
+            // 
+            this.btnSlide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSlide.BackgroundImage")));
+            this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSlide.Location = new System.Drawing.Point(6, 6);
+            this.btnSlide.Name = "btnSlide";
+            this.btnSlide.Size = new System.Drawing.Size(45, 45);
+            this.btnSlide.TabIndex = 1;
+            this.btnSlide.TabStop = false;
+            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(704, 628);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(379, 297);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(34)))));
+            this.pnLeft.Controls.Add(this.btnCerrarSesion);
+            this.pnLeft.Controls.Add(this.pbPerfil);
+            this.pnLeft.Controls.Add(this.pnReporte);
+            this.pnLeft.Controls.Add(this.pnPaciente);
+            this.pnLeft.Controls.Add(this.pnServicio);
+            this.pnLeft.Controls.Add(this.btnReportes);
+            this.pnLeft.Controls.Add(this.btnPaciente);
+            this.pnLeft.Controls.Add(this.btnServicio);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 40);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(337, 860);
+            this.pnLeft.Size = new System.Drawing.Size(309, 928);
             this.pnLeft.TabIndex = 1;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(85)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 817);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(306, 108);
+            this.btnCerrarSesion.TabIndex = 5;
+            this.btnCerrarSesion.Text = "   Cerrar     Sesion";
+            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            // 
+            // pbPerfil
+            // 
+            this.pbPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbPerfil.BackgroundImage")));
+            this.pbPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbPerfil.Location = new System.Drawing.Point(88, 23);
+            this.pbPerfil.Name = "pbPerfil";
+            this.pbPerfil.Size = new System.Drawing.Size(132, 139);
+            this.pbPerfil.TabIndex = 4;
+            this.pbPerfil.TabStop = false;
+            // 
+            // pnReporte
+            // 
+            this.pnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.pnReporte.Location = new System.Drawing.Point(1, 563);
+            this.pnReporte.Name = "pnReporte";
+            this.pnReporte.Size = new System.Drawing.Size(10, 67);
+            this.pnReporte.TabIndex = 3;
+            this.pnReporte.Visible = false;
+            // 
+            // pnPaciente
+            // 
+            this.pnPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.pnPaciente.Location = new System.Drawing.Point(0, 448);
+            this.pnPaciente.Name = "pnPaciente";
+            this.pnPaciente.Size = new System.Drawing.Size(10, 67);
+            this.pnPaciente.TabIndex = 2;
+            this.pnPaciente.Visible = false;
+            // 
+            // pnServicio
+            // 
+            this.pnServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.pnServicio.Location = new System.Drawing.Point(2, 334);
+            this.pnServicio.Name = "pnServicio";
+            this.pnServicio.Size = new System.Drawing.Size(10, 67);
+            this.pnServicio.TabIndex = 1;
+            this.pnServicio.Visible = false;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(85)))));
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(1, 564);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(306, 67);
+            this.btnReportes.TabIndex = 2;
+            this.btnReportes.Text = " Reportes";
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReporte_Click);
+            this.btnReportes.Leave += new System.EventHandler(this.btnReportes_Leave);
+            // 
+            // btnPaciente
+            // 
+            this.btnPaciente.FlatAppearance.BorderSize = 0;
+            this.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(85)))));
+            this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaciente.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPaciente.ForeColor = System.Drawing.Color.White;
+            this.btnPaciente.Image = ((System.Drawing.Image)(resources.GetObject("btnPaciente.Image")));
+            this.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPaciente.Location = new System.Drawing.Point(0, 448);
+            this.btnPaciente.Name = "btnPaciente";
+            this.btnPaciente.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnPaciente.Size = new System.Drawing.Size(306, 67);
+            this.btnPaciente.TabIndex = 1;
+            this.btnPaciente.Text = " Pacientes";
+            this.btnPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPaciente.UseVisualStyleBackColor = true;
+            this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
+            this.btnPaciente.Leave += new System.EventHandler(this.btnPaciente_Leave);
+            // 
+            // btnServicio
+            // 
+            this.btnServicio.FlatAppearance.BorderSize = 0;
+            this.btnServicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnServicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(85)))));
+            this.btnServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServicio.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnServicio.ForeColor = System.Drawing.Color.White;
+            this.btnServicio.Image = ((System.Drawing.Image)(resources.GetObject("btnServicio.Image")));
+            this.btnServicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnServicio.Location = new System.Drawing.Point(2, 334);
+            this.btnServicio.Name = "btnServicio";
+            this.btnServicio.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnServicio.Size = new System.Drawing.Size(306, 67);
+            this.btnServicio.TabIndex = 0;
+            this.btnServicio.Text = " Servicios";
+            this.btnServicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnServicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnServicio.UseVisualStyleBackColor = true;
+            this.btnServicio.Click += new System.EventHandler(this.btnServicio_Click);
+            this.btnServicio.Leave += new System.EventHandler(this.btnServicio_Leave);
             // 
             // pnUp
             // 
@@ -83,7 +254,7 @@
             this.pnUp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnUp.Location = new System.Drawing.Point(0, 0);
             this.pnUp.Name = "pnUp";
-            this.pnUp.Size = new System.Drawing.Size(1387, 40);
+            this.pnUp.Size = new System.Drawing.Size(1392, 40);
             this.pnUp.TabIndex = 0;
             this.pnUp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnUp_MouseMove);
             // 
@@ -93,9 +264,9 @@
             this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
             this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.Location = new System.Drawing.Point(1311, 4);
+            this.btnMaximizar.Location = new System.Drawing.Point(1297, 4);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(21, 30);
+            this.btnMaximizar.Size = new System.Drawing.Size(36, 30);
             this.btnMaximizar.TabIndex = 2;
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
@@ -106,9 +277,9 @@
             this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Location = new System.Drawing.Point(1264, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(1248, 3);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 31);
+            this.btnMinimizar.Size = new System.Drawing.Size(32, 31);
             this.btnMinimizar.TabIndex = 1;
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -119,9 +290,9 @@
             this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Location = new System.Drawing.Point(1353, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(1350, 3);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 31);
+            this.btnCerrar.Size = new System.Drawing.Size(30, 30);
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -131,7 +302,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1387, 900);
+            this.ClientSize = new System.Drawing.Size(1392, 968);
             this.Controls.Add(this.pnContainer);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -139,7 +310,13 @@
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnContainer.ResumeLayout(false);
+            this.pnRight.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnLeft.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.pnUp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
@@ -157,5 +334,15 @@
         private PictureBox btnMaximizar;
         private PictureBox btnMinimizar;
         private PictureBox btnCerrar;
+        private Button btnReportes;
+        private Button btnPaciente;
+        private Button btnServicio;
+        private PictureBox pictureBox1;
+        private Panel pnReporte;
+        private Panel pnPaciente;
+        private Panel pnServicio;
+        private PictureBox pbPerfil;
+        private PictureBox btnSlide;
+        private Button btnCerrarSesion;
     }
 }

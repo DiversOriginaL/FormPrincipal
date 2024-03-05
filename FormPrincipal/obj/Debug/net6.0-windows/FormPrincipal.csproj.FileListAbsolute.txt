@@ -16,3 +16,9 @@ C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\F
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\FormPrincipal\FormPrincipal\obj\Debug\net6.0-windows\FormPrincipal.genruntimeconfig.cache
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\FormPrincipal\FormPrincipal\obj\Debug\net6.0-windows\ref\FormPrincipal.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\FormPrincipal\FormPrincipal\obj\Debug\net6.0-windows\FormPrincipal.Properties.Resources.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\FormPrincipal\FormPrincipal\obj\Debug\net6.0-windows\FormPrincipal.FormsButton.Servicios.FormHijos.CrudServicio.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\FormPrincipal\FormPrincipal\obj\Debug\net6.0-windows\FormPrincipal.FormsButton.Paciente.Pacientes.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\FormPrincipal\FormPrincipal\obj\Debug\net6.0-windows\FormPrincipal.FormsButton.Reporte.Reportes.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\FormPrincipal\FormPrincipal\obj\Debug\net6.0-windows\FormPrincipal.FormsButton.Servicio.Servicios.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\FormPrincipal\FormPrincipal\obj\Debug\net6.0-windows\FormPrincipal.FormsButton.Paciente.FormHijos.CrudPaciente.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\MordernInterface\FormPrincipal\FormPrincipal\obj\Debug\net6.0-windows\FormPrincipal.FormsButton.Paciente.FormHijos.FormEstadoSalud.EstadoSalud.resources

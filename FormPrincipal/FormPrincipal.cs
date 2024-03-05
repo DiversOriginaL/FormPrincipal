@@ -1,6 +1,10 @@
 using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using FormPrincipal.FormsButton.Servicio;
+using FormPrincipal.FormsButton.Paciente;
+using FormPrincipal.FormsButton.Reporte;
+
 
 namespace FormPrincipal
 {
@@ -104,7 +108,97 @@ namespace FormPrincipal
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
-            formulario = panelformularios.Controls.OfType<MiForm>().FirstOrDefault();
-        } 
+            Control.ControlCollection controls = pnRight.Controls;
+            formulario = controls.OfType<MiForm>().FirstOrDefault();
+
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                pnRight.Controls.Add(formulario);
+                pnRight.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
+            }
+            else formulario.BringToFront();
+        }
+
+
+
+        private void btnServicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Servicios>();
+            pnServicio.Visible = true;
+        }
+
+        private void btnServicio_Leave(object sender, EventArgs e)
+        {
+            pnServicio.Visible = false;
+        }
+
+        private void btnPaciente_Click(object sender, EventArgs e)
+        {//0; 85; 34
+            AbrirFormulario<Pacientes>();
+            btnPaciente.BackColor = Color.FromArgb(00, 111, 44);
+            pnPaciente.Visible = true;
+
+        }
+
+        private void btnPaciente_Leave(object sender, EventArgs e)
+        {
+            btnPaciente.BackColor = Color.FromArgb(00, 85, 34);
+            pnPaciente.Visible = false;
+
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Reportes>();
+            btnReportes.BackColor = Color.FromArgb(00, 111, 44);
+            pnReporte.Visible = true;
+        }
+
+        private void btnReportes_Leave(object sender, EventArgs e)
+        {
+            btnReportes.BackColor = Color.FromArgb(00, 85, 34);
+            pnReporte.Visible = false;
+
+        }
+
+
+
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["Servicios"] == null)
+            {
+                btnServicio.BackColor = Color.FromArgb(0, 85, 34);
+            }
+
+            if (Application.OpenForms["Pacientes"] == null)
+            {
+                btnPaciente.BackColor = Color.FromArgb(0, 85, 34);
+            }
+
+            if (Application.OpenForms["Reportes"] == null)
+            {
+                btnReportes.BackColor = Color.FromArgb(0, 85, 34);
+            }
+        }
+
+        private void btnSlide_Click(object sender, EventArgs e)
+        {
+            if (pnLeft.Width == 309)
+            {
+                pnLeft.Width = 81;
+            }
+            else
+            {
+                pnLeft.Width = 309;
+            }
+        }
     }
 }

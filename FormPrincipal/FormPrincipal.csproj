@@ -23,4 +23,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="FormsButton\Reporte\FormHijos\" />
+  </ItemGroup>
+
 </Project>
