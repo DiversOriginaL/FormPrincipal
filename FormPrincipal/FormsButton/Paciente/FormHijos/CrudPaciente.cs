@@ -23,7 +23,7 @@ namespace FormPrincipal.FormsButton.Paciente.FormHijos
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private static extern void ReleaseCapture();
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, IntPtr wParam, IntPtr lParam);
+        private extern static void SendMessage(IntPtr hwnd, int wmsg, IntPtr wParam, IntPtr lParam);
 
         private void CrudPaciente_MouseDown(object sender, MouseEventArgs e)
         {
@@ -32,14 +32,8 @@ namespace FormPrincipal.FormsButton.Paciente.FormHijos
         }
         #endregion
 
-        #region EfectoPlaceHolder
-        private void btnEstadoSalud_Click(object sender, EventArgs e)
-        {
-            EstadoSalud estadoSalud = new EstadoSalud();
 
-            estadoSalud.Show();
-        }
-
+        #region EfectoPlaceHolder y Configuracion de controles
         private void txtPnombre_Enter(object sender, EventArgs e)
         {
             if(txtPnombre.Text == "PRIMER NOMBRE:")
@@ -234,8 +228,84 @@ namespace FormPrincipal.FormsButton.Paciente.FormHijos
                 txtNumCasa.ForeColor = Color.Silver;
             }
         }
+        //Cerra, maximizar y minimizar.
+        private void pbCerrar_Click(object sender, EventArgs e)
+        {
+            txtPnombre.Text = "PRIMER NOMBRE:";
+            txtSnombre.Text = "SEGUNDO NOMBRE:";
+            txtPapellido.Text = "PRIMER APELLIDO";
+            txtSapellido.Text = "SEGUNDO APELLIDO:";
+            txtEdad.Text = "EDAD:";
+            cbSexo.Text = "SEXO:";
+            txtCelular.Text = "CELULAR:";
+            txtTelefono.Text = "TELEFONO:";
+            txtCiudad.Text = "CIUDAD:";
+            txtSector.Text = "SECTOR:";
+            txtNumCasa.Text = "NUMERO DE CASA:";
+            this.Close();
+
+        }
+
+        private void pbMaximizar_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+            else WindowState = FormWindowState.Maximized;
+
+        }
+
+        private void pbMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
         #endregion
 
+        //ABRIR FORMULARIO HIJO
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = Application.OpenForms.OfType<MiForm>().FirstOrDefault();
 
+            if(formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = true;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.StartPosition = FormStartPosition.CenterParent;
+
+                formulario.ShowDialog();
+                formulario.BringToFront();
+            }
+            else formulario.BringToFront();
+
+        }
+        private void btnEstadoSalud_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<EstadoSalud>();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtPnombre.Text = "PRIMER NOMBRE:";
+            txtSnombre.Text = "SEGUNDO NOMBRE:";
+            txtPapellido.Text = "PRIMER APELLIDO";
+            txtSapellido.Text = "SEGUNDO APELLIDO:";
+            txtEdad.Text = "EDAD:";
+            cbSexo.Text = "SEXO:";
+            txtCelular.Text = "CELULAR:";
+            txtTelefono.Text = "TELEFONO:";
+            txtCiudad.Text = "CIUDAD:";
+            txtSector.Text = "SECTOR:";
+            txtNumCasa.Text = "NUMERO DE CASA:";
+            this.Close();
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

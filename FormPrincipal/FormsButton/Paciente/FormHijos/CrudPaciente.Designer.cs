@@ -46,13 +46,22 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEstadoSalud = new System.Windows.Forms.Button();
             this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.pnCerrar = new System.Windows.Forms.Panel();
+            this.pnMaximizar = new System.Windows.Forms.Panel();
+            this.pbCerrar = new System.Windows.Forms.PictureBox();
+            this.pbMaximizar = new System.Windows.Forms.PictureBox();
+            this.pbMinimizar = new System.Windows.Forms.PictureBox();
+            this.lblPaciente = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPnombre
             // 
             this.txtPnombre.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtPnombre.ForeColor = System.Drawing.Color.Silver;
-            this.txtPnombre.Location = new System.Drawing.Point(109, 76);
+            this.txtPnombre.Location = new System.Drawing.Point(140, 173);
             this.txtPnombre.Multiline = true;
             this.txtPnombre.Name = "txtPnombre";
             this.txtPnombre.Size = new System.Drawing.Size(485, 46);
@@ -65,7 +74,7 @@
             // 
             this.txtSapellido.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSapellido.ForeColor = System.Drawing.Color.Silver;
-            this.txtSapellido.Location = new System.Drawing.Point(109, 267);
+            this.txtSapellido.Location = new System.Drawing.Point(140, 364);
             this.txtSapellido.Multiline = true;
             this.txtSapellido.Name = "txtSapellido";
             this.txtSapellido.Size = new System.Drawing.Size(485, 46);
@@ -78,7 +87,7 @@
             // 
             this.txtSnombre.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSnombre.ForeColor = System.Drawing.Color.Silver;
-            this.txtSnombre.Location = new System.Drawing.Point(109, 139);
+            this.txtSnombre.Location = new System.Drawing.Point(140, 236);
             this.txtSnombre.Multiline = true;
             this.txtSnombre.Name = "txtSnombre";
             this.txtSnombre.Size = new System.Drawing.Size(485, 46);
@@ -91,7 +100,7 @@
             // 
             this.txtPapellido.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtPapellido.ForeColor = System.Drawing.Color.Silver;
-            this.txtPapellido.Location = new System.Drawing.Point(109, 203);
+            this.txtPapellido.Location = new System.Drawing.Point(140, 300);
             this.txtPapellido.Multiline = true;
             this.txtPapellido.Name = "txtPapellido";
             this.txtPapellido.Size = new System.Drawing.Size(485, 46);
@@ -104,10 +113,10 @@
             // 
             this.txtEdad.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtEdad.ForeColor = System.Drawing.Color.Silver;
-            this.txtEdad.Location = new System.Drawing.Point(668, 76);
+            this.txtEdad.Location = new System.Drawing.Point(705, 173);
             this.txtEdad.Multiline = true;
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(485, 46);
+            this.txtEdad.Size = new System.Drawing.Size(499, 46);
             this.txtEdad.TabIndex = 5;
             this.txtEdad.Text = "EDAD:";
             this.txtEdad.Enter += new System.EventHandler(this.txtEdad_Enter);
@@ -118,7 +127,7 @@
             this.lblPersona.AutoSize = true;
             this.lblPersona.Font = new System.Drawing.Font("Tahoma", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPersona.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPersona.Location = new System.Drawing.Point(12, 9);
+            this.lblPersona.Location = new System.Drawing.Point(43, 106);
             this.lblPersona.Name = "lblPersona";
             this.lblPersona.Size = new System.Drawing.Size(217, 53);
             this.lblPersona.TabIndex = 0;
@@ -129,7 +138,7 @@
             this.lblContacto.AutoSize = true;
             this.lblContacto.Font = new System.Drawing.Font("Tahoma", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblContacto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblContacto.Location = new System.Drawing.Point(12, 350);
+            this.lblContacto.Location = new System.Drawing.Point(43, 445);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(235, 53);
             this.lblContacto.TabIndex = 7;
@@ -139,10 +148,10 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTelefono.ForeColor = System.Drawing.Color.Silver;
-            this.txtTelefono.Location = new System.Drawing.Point(668, 418);
+            this.txtTelefono.Location = new System.Drawing.Point(705, 515);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(485, 46);
+            this.txtTelefono.Size = new System.Drawing.Size(499, 46);
             this.txtTelefono.TabIndex = 9;
             this.txtTelefono.Text = "TELEFONO:";
             this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter);
@@ -152,7 +161,7 @@
             // 
             this.txtCelular.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtCelular.ForeColor = System.Drawing.Color.Silver;
-            this.txtCelular.Location = new System.Drawing.Point(109, 418);
+            this.txtCelular.Location = new System.Drawing.Point(140, 515);
             this.txtCelular.Multiline = true;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(485, 46);
@@ -166,7 +175,7 @@
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.Font = new System.Drawing.Font("Tahoma", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblUbicacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUbicacion.Location = new System.Drawing.Point(12, 515);
+            this.lblUbicacion.Location = new System.Drawing.Point(43, 612);
             this.lblUbicacion.Name = "lblUbicacion";
             this.lblUbicacion.Size = new System.Drawing.Size(253, 53);
             this.lblUbicacion.TabIndex = 10;
@@ -176,7 +185,7 @@
             // 
             this.txtSector.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSector.ForeColor = System.Drawing.Color.Silver;
-            this.txtSector.Location = new System.Drawing.Point(109, 647);
+            this.txtSector.Location = new System.Drawing.Point(140, 744);
             this.txtSector.Multiline = true;
             this.txtSector.Name = "txtSector";
             this.txtSector.Size = new System.Drawing.Size(485, 46);
@@ -189,7 +198,7 @@
             // 
             this.txtCiudad.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtCiudad.ForeColor = System.Drawing.Color.Silver;
-            this.txtCiudad.Location = new System.Drawing.Point(109, 588);
+            this.txtCiudad.Location = new System.Drawing.Point(140, 685);
             this.txtCiudad.Multiline = true;
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(485, 46);
@@ -202,7 +211,7 @@
             // 
             this.txtNumCasa.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNumCasa.ForeColor = System.Drawing.Color.Silver;
-            this.txtNumCasa.Location = new System.Drawing.Point(109, 706);
+            this.txtNumCasa.Location = new System.Drawing.Point(140, 803);
             this.txtNumCasa.Multiline = true;
             this.txtNumCasa.Name = "txtNumCasa";
             this.txtNumCasa.Size = new System.Drawing.Size(485, 46);
@@ -221,13 +230,14 @@
             this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(758, 803);
+            this.btnGuardar.Location = new System.Drawing.Point(754, 915);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(256, 67);
             this.btnGuardar.TabIndex = 15;
             this.btnGuardar.Text = " GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -239,13 +249,14 @@
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(1054, 803);
+            this.btnCancelar.Location = new System.Drawing.Point(1038, 915);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(236, 67);
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEstadoSalud
             // 
@@ -257,7 +268,7 @@
             this.btnEstadoSalud.Font = new System.Drawing.Font("Tahoma", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEstadoSalud.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnEstadoSalud.Image = ((System.Drawing.Image)(resources.GetObject("btnEstadoSalud.Image")));
-            this.btnEstadoSalud.Location = new System.Drawing.Point(668, 588);
+            this.btnEstadoSalud.Location = new System.Drawing.Point(705, 685);
             this.btnEstadoSalud.Name = "btnEstadoSalud";
             this.btnEstadoSalud.Size = new System.Drawing.Size(499, 164);
             this.btnEstadoSalud.TabIndex = 14;
@@ -274,19 +285,81 @@
             this.cbSexo.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cbSexo.Location = new System.Drawing.Point(668, 139);
+            this.cbSexo.Location = new System.Drawing.Point(705, 236);
             this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(485, 42);
+            this.cbSexo.Size = new System.Drawing.Size(499, 42);
             this.cbSexo.TabIndex = 17;
             this.cbSexo.Text = "SEXO:";
             this.cbSexo.Leave += new System.EventHandler(this.cbSexo_Leave);
+            // 
+            // pnCerrar
+            // 
+            this.pnCerrar.Location = new System.Drawing.Point(0, 0);
+            this.pnCerrar.Name = "pnCerrar";
+            this.pnCerrar.Size = new System.Drawing.Size(200, 100);
+            this.pnCerrar.TabIndex = 0;
+            // 
+            // pnMaximizar
+            // 
+            this.pnMaximizar.Location = new System.Drawing.Point(0, 0);
+            this.pnMaximizar.Name = "pnMaximizar";
+            this.pnMaximizar.Size = new System.Drawing.Size(200, 100);
+            this.pnMaximizar.TabIndex = 0;
+            // 
+            // pbCerrar
+            // 
+            this.pbCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbCerrar.BackgroundImage")));
+            this.pbCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbCerrar.Location = new System.Drawing.Point(1257, 12);
+            this.pbCerrar.Name = "pbCerrar";
+            this.pbCerrar.Size = new System.Drawing.Size(33, 26);
+            this.pbCerrar.TabIndex = 18;
+            this.pbCerrar.TabStop = false;
+            this.pbCerrar.Click += new System.EventHandler(this.pbCerrar_Click);
+            // 
+            // pbMaximizar
+            // 
+            this.pbMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbMaximizar.BackgroundImage")));
+            this.pbMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbMaximizar.Location = new System.Drawing.Point(1213, 12);
+            this.pbMaximizar.Name = "pbMaximizar";
+            this.pbMaximizar.Size = new System.Drawing.Size(33, 26);
+            this.pbMaximizar.TabIndex = 19;
+            this.pbMaximizar.TabStop = false;
+            this.pbMaximizar.Click += new System.EventHandler(this.pbMaximizar_Click);
+            // 
+            // pbMinimizar
+            // 
+            this.pbMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbMinimizar.BackgroundImage")));
+            this.pbMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbMinimizar.Location = new System.Drawing.Point(1174, 12);
+            this.pbMinimizar.Name = "pbMinimizar";
+            this.pbMinimizar.Size = new System.Drawing.Size(30, 26);
+            this.pbMinimizar.TabIndex = 20;
+            this.pbMinimizar.TabStop = false;
+            this.pbMinimizar.Click += new System.EventHandler(this.pbMinimizar_Click);
+            // 
+            // lblPaciente
+            // 
+            this.lblPaciente.AutoSize = true;
+            this.lblPaciente.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPaciente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPaciente.Location = new System.Drawing.Point(493, 12);
+            this.lblPaciente.Name = "lblPaciente";
+            this.lblPaciente.Size = new System.Drawing.Size(322, 68);
+            this.lblPaciente.TabIndex = 21;
+            this.lblPaciente.Text = "INSERTAR";
             // 
             // CrudPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(1302, 882);
+            this.ClientSize = new System.Drawing.Size(1302, 994);
+            this.Controls.Add(this.lblPaciente);
+            this.Controls.Add(this.pbMinimizar);
+            this.Controls.Add(this.pbMaximizar);
+            this.Controls.Add(this.pbCerrar);
             this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.btnEstadoSalud);
             this.Controls.Add(this.btnCancelar);
@@ -308,6 +381,9 @@
             this.Name = "CrudPaciente";
             this.Text = "CrudPaciente";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CrudPaciente_MouseDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +408,11 @@
         private Button btnCancelar;
         private Button btnEstadoSalud;
         private ComboBox cbSexo;
+        private Panel pnCerrar;
+        private Panel pnMaximizar;
+        private PictureBox pbCerrar;
+        private PictureBox pbMaximizar;
+        private PictureBox pbMinimizar;
+        private Label lblPaciente;
     }
 }

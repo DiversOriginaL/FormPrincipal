@@ -143,6 +143,78 @@ namespace FormPrincipal.FormsButton.Paciente.FormHijos.FormEstadoSalud
                 txtEmbarazo.Font = fuente;
             }
         }
+        private void pnCerrar_Click(object sender, EventArgs e)
+        {
+            txtAlergia.Text = "DESCRIPCION:";
+            txtAlergia.ForeColor = Color.Silver;
+
+            txtEnfermedad.Text = "DESCRIPCION:";
+            txtEnfermedad.ForeColor = Color.Silver;
+
+            txtMedicamento.Text = "DESCRIPCION:";
+            txtMedicamento.ForeColor = Color.Silver;
+
+            txtEmbarazo.Text = "DESCRIPCION:";
+            txtEmbarazo.ForeColor = Color.Silver;
+
+            this.Close();
+
+        }
+
+        private void pnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void pnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void rbNoEnfermedad_CheckedChanged(object sender, EventArgs e)
+        {
+            txtEnfermedad.Visible = false;
+
+        }
+
+        private void rbNoAlergia_CheckedChanged(object sender, EventArgs e)
+        {
+            txtAlergia.Visible = false;
+        }
+
+        private void rdNoMedicamento_CheckedChanged(object sender, EventArgs e)
+        {
+            txtMedicamento.Visible = false;
+        }
+
+        private void rbNoEmbarazada_CheckedChanged(object sender, EventArgs e)
+        {
+            txtEmbarazo.Visible = false;
+        }
+
         #endregion
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtAlergia.Text = "DESCRIPCION:";
+            txtAlergia.ForeColor = Color.Silver;
+
+            txtEnfermedad.Text = "DESCRIPCION:";
+            txtEnfermedad.ForeColor = Color.Silver;
+
+            txtMedicamento.Text = "DESCRIPCION:";
+            txtMedicamento.ForeColor = Color.Silver;
+
+            txtEmbarazo.Text = "DESCRIPCION:";
+            txtEmbarazo.ForeColor = Color.Silver;
+
+            this.Close();
+
+        }
+
     }
 }

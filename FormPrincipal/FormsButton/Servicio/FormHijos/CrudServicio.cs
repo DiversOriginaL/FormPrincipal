@@ -168,8 +168,31 @@ namespace FormPrincipal.FormsButton.Servicios.FormHijos
             }
 
         }
-#endregion
 
+        #endregion
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            cbPaciente.Text = "";
+            cbServicio.Text = "";
+            txtCosto.Text = "";
+            txtCantidad.Text = "";
+            txtSubTotal.Text = "";
+            txtDescuento.Text = "";
+            txtTotal.Text = "";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            cbPaciente.Text = "PACIENTE:";
+            cbServicio.Text = "SERVICIO:";
+            txtCosto.Text = "PRECIO:";
+            txtCantidad.Text = "CANTIDAD:";
+            txtSubTotal.Text = "SUBTOTAL:";
+            txtDescuento.Text = "DESCUENTO:";
+            txtTotal.Text = "TOTAL:";
+
+            this.Close();
+        }
     }
 }

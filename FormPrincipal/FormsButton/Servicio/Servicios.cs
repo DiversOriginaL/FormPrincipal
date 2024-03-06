@@ -33,15 +33,12 @@ namespace FormPrincipal.FormsButton.Servicio
             if (formulario == null)
             {
                 formulario = new MiForm();
-                formulario.TopLevel = false;
+                formulario.TopLevel = true;
                 formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.StartPosition = FormStartPosition.CenterScreen;
+                formulario.StartPosition = FormStartPosition.CenterParent;
 
-                this.Controls.Add(formulario);
-
-                formulario.Show();
+                formulario.ShowDialog();
                 formulario.BringToFront();
-
             }
             else formulario.BringToFront();
         }
